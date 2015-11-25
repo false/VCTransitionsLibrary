@@ -16,4 +16,7 @@ Pod::Spec.new do |s|
   s.source_files = 'AnimationControllers/*.{h,m}', 'InteractionControllers/*.{h,m}' 
   s.homepage = 'https://github.com/ColinEberhardt/VCTransitionsLibrary'
   s.requires_arc = true
+  
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
 end
