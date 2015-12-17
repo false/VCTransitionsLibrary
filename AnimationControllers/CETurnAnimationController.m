@@ -59,6 +59,7 @@
                                                                     toView.layer.transform =  [self rotate:0.0];
                                                                 }];
                               } completion:^(BOOL finished) {
+                                  containerView.layer.sublayerTransform = CATransform3DIdentity;
                                   [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                               }];
 

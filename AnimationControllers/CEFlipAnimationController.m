@@ -74,6 +74,8 @@
                                                                 }];
                               } completion:^(BOOL finished) {
                                   
+                                  containerView.layer.sublayerTransform = CATransform3DIdentity;
+                                  
                                   // remove all the temporary views
                                   if ([transitionContext transitionWasCancelled]) {
                                       [self removeOtherViews:fromView];

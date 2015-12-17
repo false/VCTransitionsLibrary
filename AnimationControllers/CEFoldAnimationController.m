@@ -106,6 +106,9 @@
             
         }
     }  completion:^(BOOL finished) {
+        
+        containerView.layer.sublayerTransform = CATransform3DIdentity;
+        
         // remove the snapshot views
         for (UIView *view in toViewFolds) {
             [view removeFromSuperview];
@@ -113,6 +116,7 @@
         for (UIView *view in fromViewFolds) {
             [view removeFromSuperview];
         }
+        
         // restore the to- and from- to the initial location
         toView.frame = containerView.bounds;
         fromView.frame = containerView.bounds;
